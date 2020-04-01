@@ -1,0 +1,47 @@
+home-header{
+    height: 100px;
+    width: 100%;
+    background-color: pink;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+home-footer{
+    height:50px;
+    position:fixed;
+    bottom:0px;
+    z-index:-1;
+
+
+}
+
+.home-main_content{
+    display: flex;
+    position: absolute;
+    top: 100px;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    overflow-y: hidden;
+    padding-bottom: 50px;
+    /*min-height: calc(100vh - 50px);*/
+
+}
+.home-content_wrap{
+    display: flex;
+    width: 100%;
+}
+.home-l_box {
+    min-width: 250px;
+    overflow-y: auto;
+    background-color: aqua;
+    height: 800px;
+}
+.home-r_box {
+    overflow-y: auto;
+    flex: 1;
+    background-color: blue;
+}
