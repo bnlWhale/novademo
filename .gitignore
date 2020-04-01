@@ -42,6 +42,7 @@ packages/react-devtools-inline/dist
 packages/react-devtools-shell/dist
 
 .idea
+.idea/workspace.xml
 *.iml
 .vscode
 *.swp
