@@ -2,6 +2,7 @@ import "../cssdir/Novademo.css"
 import * as React from "react";
 import {getTxtArray, getItemArray} from "../utils/Utils";
 
+
 class MainStage extends React.Component {
 
 
