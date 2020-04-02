@@ -1,6 +1,7 @@
 import * as React from "react"
 import 'antd/dist/antd.css';
 import { Menu } from 'antd';
+import {Link, withRouter} from 'react-router-dom'
 import {
     MailOutlined,
     AppstoreOutlined,
@@ -37,6 +38,7 @@ class HeaderNavibar extends React.Component{
                     Navigation Two
                 </Menu.Item>
                 <Menu.Item key="about" >
+                    <Link to="/mainStage"/>
                     <AppstoreOutlined />
                     Navigation three
                 </Menu.Item>
