@@ -37,24 +37,37 @@ let pTxt =
     '        and iOS App customers." As for the API, it\'ll remain active until the end of next year, but Dark Sky won\'t let\n' +
     '        anyone else sign up.'
 
+export function getItemArray(num,key) {
+
+    let a = Array(num).fill(null);
+    let b = a.map((val,index)=>{
+        let uniqueKey = key+"_getItemArray_"+index;
+        let content = 'item '+(index+1);
+        return(
+            <p key={uniqueKey}>
+                {content}
+            </p>
+        )
+
+    })
+    return b;
+}
 
 
 
 
 
-
-export function getTxtArray(num){
+export function getTxtArray(num, key){
 
     let a = Array(num).fill(null);
 
     let b = a.map((val, index)=>{
 
-        let key = "getTxtArray "+index;
-        return (<p key={key}>
+        let uniqueKey = key+"_getTxtArray "+index;
+        return (
+            <p key={uniqueKey}>
             {pTxt+" "+index}
         </p>);
-
-
     })
 
     return b;
