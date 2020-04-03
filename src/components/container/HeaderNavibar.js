@@ -22,7 +22,7 @@ class HeaderNavibar extends React.Component {
         this.setState({
             current: e.key,
         });
-        alert(e.key + " " + this.state.current);
+
     };
 
     render() {
@@ -39,7 +39,7 @@ class HeaderNavibar extends React.Component {
                         Navigation Two
                     </Menu.Item>
                     <Menu.Item key="about">
-                        <Link to="/mainStage"/>
+                        <Link to="/mainPage"/>
                         <AppstoreOutlined/>
                         Navigation three
                     </Menu.Item>

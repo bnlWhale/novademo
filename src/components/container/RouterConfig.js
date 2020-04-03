@@ -1,5 +1,6 @@
 import * as React from "react"
 import HomePage from "./HomePage";
+import MainPage from "./MainPage";
 
 export const routes = [
     {
@@ -17,5 +18,10 @@ export const routes = [
         path: "/shoelaces",
         sidebar: () => <div>shoelaces!</div>,
         main: () => <h2>Shoelaces</h2>
+    },
+    {
+        path: "/mainPage",
+        sidebar: () => <div>mainPage</div>,
+        main: () => <MainPage/>
     }
 ];
