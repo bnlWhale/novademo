@@ -22,18 +22,7 @@ class MainStage extends React.Component {
                 <div className="content_wrap">
                     <SideBarPage />
                     <div className="right_wrap">
-<<<<<<< HEAD
                         <div className="r_box">
-                          wwwwww
-=======
-                        {/*
-                         <div className="r_box">
-                            {getTxtArray(22,"MainStage_right_content")}
->>>>>>> 3e4111c1f545b0137d208096a3b19b4c80527215
-                        </div>
-                        */}
-                        <div className="r_box">
-
                             <Switch>
                                 {routes.map((route, index) => (
                                     // Render more <Route>s with the same paths as
@@ -47,10 +36,6 @@ class MainStage extends React.Component {
                                 ))}
                             </Switch>
                         </div>
-
-
-
-
                         <div className="main_footer">
                             footer
                         </div>
@@ -60,16 +45,6 @@ class MainStage extends React.Component {
 
 
         )
-
-
-
-
-
-
-
-
-
-
     }
 
 }
