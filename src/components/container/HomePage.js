@@ -1,6 +1,6 @@
 import "../cssdir/HomePageCss.css"
 import * as React from "react";
-
+import {getTxtArray, getItemArray} from "../utils/Utils";
 
 class HomePage extends React.Component{
 
@@ -10,11 +10,9 @@ class HomePage extends React.Component{
 
     render() {
 
-
-
         return(
             <div>
-                this is a home page !
+                {getTxtArray(22,"MainStage_right_content")}
             </div>
 
         )
