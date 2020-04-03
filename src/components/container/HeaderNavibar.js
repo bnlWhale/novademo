@@ -1,6 +1,6 @@
 import * as React from "react"
 import 'antd/dist/antd.css';
-import { Menu } from 'antd';
+import {Menu} from 'antd';
 import {Link, withRouter} from 'react-router-dom'
 import {
     MailOutlined,
@@ -8,10 +8,10 @@ import {
     SettingOutlined,
 } from '@ant-design/icons';
 
-const { SubMenu } = Menu;
+const {SubMenu} = Menu;
 
 
-class HeaderNavibar extends React.Component{
+class HeaderNavibar extends React.Component {
 
     state = {
         current: 'mail',
@@ -22,27 +22,30 @@ class HeaderNavibar extends React.Component{
         this.setState({
             current: e.key,
         });
-        alert(e.key+" "+this.state.current);
+        alert(e.key + " " + this.state.current);
     };
 
     render() {
         return (
+            <div className="header_panel">
+                <h1>NOVA</h1>
+                <Menu onClick={this.handleClick} selectedKeys={[this.state.current]} mode="horizontal">
+                    <Menu.Item key="mail">
+                        <MailOutlined/>
+                        Navigation One
+                    </Menu.Item>
+                    <Menu.Item key="app">
+                        <AppstoreOutlined/>
+                        Navigation Two
+                    </Menu.Item>
+                    <Menu.Item key="about">
+                        <Link to="/mainStage"/>
+                        <AppstoreOutlined/>
+                        Navigation three
+                    </Menu.Item>
+                </Menu>
+            </div>
 
-            <Menu onClick={this.handleClick} selectedKeys={[this.state.current]} mode="horizontal">
-                <Menu.Item key="mail">
-                    <MailOutlined />
-                    Navigation One
-                </Menu.Item>
-                <Menu.Item key="app" >
-                    <AppstoreOutlined />
-                    Navigation Two
-                </Menu.Item>
-                <Menu.Item key="about" >
-                    <Link to="/mainStage"/>
-                    <AppstoreOutlined />
-                    Navigation three
-                </Menu.Item>
-            </Menu>
 
         )
 

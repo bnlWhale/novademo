@@ -6,7 +6,7 @@ import HomePage from "./components/container/HomePage";
 import "./components/cssdir/HomePageCss.css";
 import MainHeader from "./components/container/MainHeader";
 import {
-    Route,
+    BrowserRouter,
     withRouter,
     Switch
 } from 'react-router-dom';
@@ -20,16 +20,7 @@ class App extends React.Component {
                 <div className="main_header">
                     <HeaderNavibar/>
                 </div>
-                <switch>
-
-                    <Route exact path="/"
-                           render={()=><HomePage/>}>
-                    </Route>
-
-                    <Route path="/mainStage"
-                           render={()=><MainStage/>}>
-                    </Route>
-                </switch>
+                <MainStage/>
             </div>
         );
 

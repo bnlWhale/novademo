@@ -2,14 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f07a8352-680d-4a1c-9c5e-ed7f9b9320e1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/container/RouterConfig.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/container/SideBarPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/container/HeaderNavibar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/container/HeaderNavibar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/container/HomePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/container/HomePage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/container/MainStage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/container/MainStage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/cssdir/Novademo.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cssdir/Novademo.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -18,6 +30,7 @@
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="PropertiesComponent">
+    <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RunManager">
@@ -53,26 +66,30 @@
       <screen x="0" y="23" width="2560" height="1337" />
     </state>
     <state x="719" y="361" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.2560.1337/-1920.23.1920.1057@0.23.2560.1337" timestamp="1585808381003" />
-    <state width="1176" height="362" key="GridCell.Tab.0.bottom" timestamp="1585810232692">
-      <screen x="0" y="23" width="2560" height="1337" />
-    </state>
-    <state width="1176" height="362" key="GridCell.Tab.0.bottom/0.23.2560.1337/-1920.23.1920.1057@0.23.2560.1337" timestamp="1585810232692" />
-    <state width="1176" height="362" key="GridCell.Tab.0.center" timestamp="1585810232691">
-      <screen x="0" y="23" width="2560" height="1337" />
-    </state>
-    <state width="1176" height="362" key="GridCell.Tab.0.center/0.23.2560.1337/-1920.23.1920.1057@0.23.2560.1337" timestamp="1585810232691" />
-    <state width="1176" height="362" key="GridCell.Tab.0.left" timestamp="1585810232691">
-      <screen x="0" y="23" width="2560" height="1337" />
-    </state>
-    <state width="1176" height="362" key="GridCell.Tab.0.left/0.23.2560.1337/-1920.23.1920.1057@0.23.2560.1337" timestamp="1585810232691" />
-    <state width="1176" height="362" key="GridCell.Tab.0.right" timestamp="1585810232691">
-      <screen x="0" y="23" width="2560" height="1337" />
-    </state>
-    <state width="1176" height="362" key="GridCell.Tab.0.right/0.23.2560.1337/-1920.23.1920.1057@0.23.2560.1337" timestamp="1585810232691" />
-    <state x="421" y="271" key="IDE.errors.dialog" timestamp="1585843750594">
+    <state width="1218" height="184" key="GridCell.Tab.0.bottom" timestamp="1585882303104">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state x="421" y="271" key="IDE.errors.dialog/0.23.1280.777@0.23.1280.777" timestamp="1585843750594" />
+    <state width="1218" height="184" key="GridCell.Tab.0.bottom/0.23.1280.777@0.23.1280.777" timestamp="1585882303104" />
+    <state width="1176" height="362" key="GridCell.Tab.0.bottom/0.23.2560.1337/-1920.23.1920.1057@0.23.2560.1337" timestamp="1585810232692" />
+    <state width="1218" height="184" key="GridCell.Tab.0.center" timestamp="1585882303103">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state width="1218" height="184" key="GridCell.Tab.0.center/0.23.1280.777@0.23.1280.777" timestamp="1585882303103" />
+    <state width="1176" height="362" key="GridCell.Tab.0.center/0.23.2560.1337/-1920.23.1920.1057@0.23.2560.1337" timestamp="1585810232691" />
+    <state width="1218" height="184" key="GridCell.Tab.0.left" timestamp="1585882303103">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state width="1218" height="184" key="GridCell.Tab.0.left/0.23.1280.777@0.23.1280.777" timestamp="1585882303102" />
+    <state width="1176" height="362" key="GridCell.Tab.0.left/0.23.2560.1337/-1920.23.1920.1057@0.23.2560.1337" timestamp="1585810232691" />
+    <state width="1218" height="184" key="GridCell.Tab.0.right" timestamp="1585882303104">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state width="1218" height="184" key="GridCell.Tab.0.right/0.23.1280.777@0.23.1280.777" timestamp="1585882303104" />
+    <state width="1176" height="362" key="GridCell.Tab.0.right/0.23.2560.1337/-1920.23.1920.1057@0.23.2560.1337" timestamp="1585810232691" />
+    <state x="421" y="271" key="IDE.errors.dialog" timestamp="1585878766834">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state x="421" y="271" key="IDE.errors.dialog/0.23.1280.777@0.23.1280.777" timestamp="1585878766834" />
     <state x="842" y="449" key="IDE.errors.dialog/0.23.2560.1337/-1920.23.1920.1057@0.23.2560.1337" timestamp="1585810183449" />
     <state x="756" y="338" key="SettingsEditor" timestamp="1585810220094">
       <screen x="0" y="23" width="2560" height="1337" />
