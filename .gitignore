@@ -43,6 +43,7 @@ packages/react-devtools-shell/dist
 
 .idea
 **/.idea/workspace.xml
+.idea/workspace.xml
 *.iml
 .vscode
 *.swp
