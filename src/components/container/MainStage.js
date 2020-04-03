@@ -18,7 +18,7 @@ class MainStage extends React.Component {
                     </div>
                     <div className="right_wrap">
                         <div className="r_box">
-                            {getTxtArray(22,"MainStage_right_content")}
+                          wwwwww
                         </div>
                         <div className="main_footer">
                             footer
