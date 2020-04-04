@@ -10,7 +10,6 @@ import {
 
 const {SubMenu} = Menu;
 
-
 class HeaderNavibar extends React.Component {
 
     state = {
@@ -39,7 +38,7 @@ class HeaderNavibar extends React.Component {
                         Navigation Two
                     </Menu.Item>
                     <Menu.Item key="about">
-                        <Link to="/mainPage"/>
+                        <Link to="/mainStage"/>
                         <AppstoreOutlined/>
                         Navigation three
                     </Menu.Item>

@@ -19,14 +19,12 @@ class SideBarPage extends React.Component{
                 */}
                 <div>
                     <ul style={{ listStyleType: "none", padding: 0 }}>
+
                         <li>
-                            <Link to="/">Home</Link>
+                            <Link to="/mainStage/bubblegum">Bubblegum</Link>
                         </li>
                         <li>
-                            <Link to="/bubblegum">Bubblegum</Link>
-                        </li>
-                        <li>
-                            <Link to="/shoelaces">Shoelaces</Link>
+                            <Link to="/mainStage/shoelaces">Shoelaces</Link>
                         </li>
                     </ul>
                     <Switch>

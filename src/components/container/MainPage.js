@@ -14,18 +14,7 @@ class MainPage extends React.Component{
                     <LeftSideBar />
                     <div className="right_wrap">
                         <div className="r_box">
-                            <Switch>
-                                {routes.map((route, index) => (
-                                    // Render more <Route>s with the same paths as
-                                    // above, but different components this time.
-                                    <Route
-                                        key={index}
-                                        path={route.path}
-                                        exact={route.exact}
-                                        children={<route.main />}
-                                    />
-                                ))}
-                            </Switch>
+
                         </div>
                         <div className="main_footer">
                             footer
