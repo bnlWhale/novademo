@@ -1,4 +1,5 @@
 import * as React from "react";
+import {getTxtArray} from "../utils/Utils";
 
 
 class AboutPage extends React.Component {
@@ -8,7 +9,7 @@ class AboutPage extends React.Component {
 
             return(
                 <div >
-                   <h1>this is a about page</h1>
+                    {getTxtArray(5,"MainStage_right_content")}
                 </div>
 
             )

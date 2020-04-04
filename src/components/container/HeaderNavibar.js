@@ -35,10 +35,11 @@ class HeaderNavibar extends React.Component {
                     </Menu.Item>
                     <Menu.Item key="app">
                         <AppstoreOutlined/>
+                        <Link to="/aboutPage"/>
                         Navigation Two
                     </Menu.Item>
                     <Menu.Item key="about">
-                        <Link to="/mainStage"/>
+                        <Link to="/"/>
                         <AppstoreOutlined/>
                         Navigation three
                     </Menu.Item>

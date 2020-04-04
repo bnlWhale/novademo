@@ -23,17 +23,25 @@ class App extends React.Component {
                 <div className="main_header">
                     <HeaderNavibar/>
                 </div>
+
+
+
                 <Switch>
                     <Route exact path="/">
-                        <HomePage/>
-                    </Route>
-                    <Route path="/mainPage">
-                        <MainPage/>
-                    </Route>
-                    <Route path="/mainStage">
                         <MainStage/>
                     </Route>
+
+                    <Route path="/aboutPage">
+                        <AboutPage/>
+                    </Route>
                 </Switch>
+
+
+
+                {/*
+                 <MainStage/>
+                */}
+
             </div>
 
 

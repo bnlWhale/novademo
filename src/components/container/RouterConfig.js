@@ -13,7 +13,7 @@ export const routes = [
     {
         path: "/mainStage/shoelaces",
         sidebar: () => <div>shoelaces!</div>,
-        main: () => <h2>Shoelaces</h2>
+        main: () => <HomePage/>
     },
 
 ];

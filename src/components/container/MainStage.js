@@ -2,20 +2,22 @@ import "../cssdir/Novademo.css"
 import * as React from "react";
 import {getTxtArray, getItemArray} from "../utils/Utils";
 import SideBarPage from "./SideBarPage";
-import {
-    Route,
-    withRouter,
-    Switch
-} from 'react-router-dom';
 import {routes} from "./RouterConfig";
 import HomePage from "./HomePage";
-
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link,
+    useParams,
+    useRouteMatch
+} from "react-router-dom";
 
 class MainStage extends React.Component {
 
 
     render() {
-
+        let { path, url } = useRouteMatch();
         return(
 
             <div className="main_content">
@@ -24,16 +26,7 @@ class MainStage extends React.Component {
                     <div className="right_wrap">
                         <div className="r_box">
                             <Switch>
-                                {routes.map((route, index) => (
-                                    // Render more <Route>s with the same paths as
-                                    // above, but different components this time.
-                                    <Route
-                                        key={index}
-                                        path={route.path}
-                                        exact={route.exact}
-                                        children={<route.main />}
-                                    />
-                                ))}
+
                             </Switch>
                         </div>
                         <div className="main_footer">
