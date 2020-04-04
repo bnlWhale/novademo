@@ -14,7 +14,9 @@ class MainPage extends React.Component{
                     <LeftSideBar />
                     <div className="right_wrap">
                         <div className="r_box">
+                            <Switch>
 
+                            </Switch>
                         </div>
                         <div className="main_footer">
                             footer

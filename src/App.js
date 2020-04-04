@@ -8,6 +8,7 @@ import MainHeader from "./components/container/MainHeader";
 import {
     BrowserRouter as Router,
     withRouter,
+    Redirect,
     Route,
     Switch
 } from 'react-router-dom';
@@ -18,33 +19,34 @@ class App extends React.Component {
 
     render() {
         return (
-
-            <div className="App">
-                <div className="main_header">
-                    <HeaderNavibar/>
-                </div>
-
-
-
-                <Switch>
-                    <Route exact path="/">
-                        <MainStage/>
-                    </Route>
-
-                    <Route path="/aboutPage">
-                        <AboutPage/>
-                    </Route>
-                </Switch>
+            <Router>
+                <div className="App">
+                    <div className="main_header">
+                        <HeaderNavibar/>
+                    </div>
 
 
+                    <Switch>
+                        <Route exact path="/">
+                            <Redirect to="/mainPage" />
+                        </Route>
 
-                {/*
+                        <Route path="/mainStage">
+                            <MainStage/>
+                        </Route>
+                        <Route path="/mainPage">
+                            <MainPage/>
+                        </Route>
+                    </Switch>
+
+
+                    {/*
                  <MainStage/>
                 */}
 
-            </div>
+                </div>
 
-
+            </Router>
         );
 
     }
@@ -53,4 +55,4 @@ class App extends React.Component {
 }
 
 
-export default withRouter(App);
+export default App;

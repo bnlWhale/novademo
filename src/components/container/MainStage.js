@@ -1,5 +1,5 @@
 import "../cssdir/Novademo.css"
-import * as React from "react";
+import React from "react";
 import {getTxtArray, getItemArray} from "../utils/Utils";
 import SideBarPage from "./SideBarPage";
 import {routes} from "./RouterConfig";
@@ -13,33 +13,48 @@ import {
     useRouteMatch
 } from "react-router-dom";
 
-class MainStage extends React.Component {
+function MainStage() {
 
 
-    render() {
-        let { path, url } = useRouteMatch();
-        return(
+    let {path, url} = useRouteMatch();
+    return (
 
-            <div className="main_content">
-                <div className="content_wrap">
-                    <SideBarPage />
-                    <div className="right_wrap">
-                        <div className="r_box">
-                            <Switch>
-
-                            </Switch>
-                        </div>
-                        <div className="main_footer">
-                            footer
-                        </div>
+        <div className="main_content">
+            <div className="content_wrap">
+                <SideBarPage/>
+                <div className="right_wrap">
+                    <div className="r_box">
+                        <Switch>
+                            <Route exact path={path}>
+                                <h3>Please select a topic.</h3>
+                            </Route>
+                            <Route path={`${path}/:topicId`}>
+                                <Topic />
+                            </Route>
+                        </Switch>
+                    </div>
+                    <div className="main_footer">
+                        footer
                     </div>
                 </div>
             </div>
+        </div>
 
+    )
+}
 
-        )
-    }
+function Topic() {
+    // The <Route> that rendered this component has a
+    // path of `/topics/:topicId`. The `:topicId` portion
+    // of the URL indicates a placeholder that we can
+    // get from `useParams()`.
+    let { topicId } = useParams();
 
+    return (
+        <div>
+            <h3>{topicId}</h3>
+        </div>
+    );
 }
 
 export default MainStage;
