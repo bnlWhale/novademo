@@ -30,18 +30,29 @@ class HeaderNavibar extends React.Component {
                 <h1>NOVA</h1>
                 <Menu onClick={this.handleClick} selectedKeys={[this.state.current]} mode="horizontal">
                     <Menu.Item key="mail">
+                        <Link to="/"/>
                         <MailOutlined/>
-                        Navigation One
+                        Home
                     </Menu.Item>
                     <Menu.Item key="app">
                         <AppstoreOutlined/>
                         <Link to="/aboutPage"/>
-                        Navigation Two
+                        Schedule
+                    </Menu.Item>
+                    <Menu.Item key="security">
+                        <Link to="/mainStage"/>
+                        <AppstoreOutlined/>
+                        Login || Register
+                    </Menu.Item>
+                    <Menu.Item key="jobInfo">
+                        <Link to="/mainStage"/>
+                        <AppstoreOutlined/>
+                        Post
                     </Menu.Item>
                     <Menu.Item key="about">
                         <Link to="/mainStage"/>
                         <AppstoreOutlined/>
-                        Navigation three
+                       About
                     </Menu.Item>
                 </Menu>
             </div>

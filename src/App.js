@@ -26,6 +26,7 @@ class App extends React.Component {
                     </div>
 
 
+
                     <Switch>
                         <Route exact path="/">
                             <Redirect to="/mainPage" />
@@ -38,6 +39,10 @@ class App extends React.Component {
                             <MainPage/>
                         </Route>
                     </Switch>
+
+
+
+
 
 
                     {/*
