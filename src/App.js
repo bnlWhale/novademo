@@ -15,6 +15,7 @@ import {
 } from 'react-router-dom';
 import HeaderNavibar from "./components/container/HeaderNavibar";
 import MainPage from "./components/container/MainPage";
+import LoginPage from "./components/container/LoginPage";
 
 class App extends React.Component {
 
@@ -30,7 +31,7 @@ class App extends React.Component {
 
                     <Switch>
                         <Route exact path="/">
-                            <Redirect to="/mainPage" />
+                            <Redirect to="/loginPage" />
                         </Route>
 
                         <Route path="/mainStage">
@@ -38,6 +39,9 @@ class App extends React.Component {
                         </Route>
                         <Route path="/mainPage">
                             <MainPage/>
+                        </Route>
+                        <Route path="/loginPage">
+                            <LoginPage/>
                         </Route>
                     </Switch>
 

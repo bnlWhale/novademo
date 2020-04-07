@@ -26,6 +26,17 @@
     overflow-y: hidden;
 
 }
+
+.normal_page{
+    display: flex;
+    position: absolute;
+    top: 100px;
+    width: 100%;
+    flex-direction: column;
+
+}
+
+
 .content_wrap{
     display: flex;
     width: 100%;
@@ -57,4 +68,5 @@
     background-color: burlywood;
     flex-shrink: 0;
     margin-right:10px;
+
 }
