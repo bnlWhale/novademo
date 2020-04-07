@@ -17,3 +17,17 @@ export const routes = [
     },
 
 ];
+
+
+export const mainPageRoutes = [
+
+    {
+        path: "/mainPage/welcome",
+        main: () => <h2>Bubblegum</h2>
+    },
+    {
+        path: "/mainPage/shoelaces",
+        main: () => <HomePage/>
+    },
+
+];

@@ -1,5 +1,6 @@
 import * as React from 'react';
 import './App.css';
+import { connect } from "react-redux";
 import MainStage from "./components/container/MainStage";
 import AboutPage from "./components/container/AboutPage";
 import HomePage from "./components/container/HomePage";
@@ -40,17 +41,11 @@ class App extends React.Component {
                         </Route>
                     </Switch>
 
-
-
-
-
-
                     {/*
                  <MainStage/>
                 */}
 
                 </div>
-
             </Router>
         );
 
@@ -59,5 +54,18 @@ class App extends React.Component {
 
 }
 
+const mapStateToProps = state => ({
+    wasLogin: state.wasLogin
+});
 
-export default App;
+const mapDispatchToProps = {
+
+};
+
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(App);
+
+

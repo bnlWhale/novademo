@@ -1,15 +1,23 @@
 const initState = {
-    books: []
+    books: [],
+    wasLogin: false,
 };
 
 export default (state = initState, action) => {
     switch (action.type) {
-        case "ADD_BOOK": {
+
+        case "Login":{
+            return {
+              ...state,
+                wasLogin: true
+            }
+        };
+        case "Logout":{
             return {
                 ...state,
-                books: state.books.concat(action.book)
-            };
-        }
+                wasLogin: false
+            }
+        };
         default: {
             return state;
         }
