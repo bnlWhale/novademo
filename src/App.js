@@ -26,9 +26,6 @@ class App extends React.Component {
                     <div className="main_header">
                         <HeaderNavibar/>
                     </div>
-
-
-
                     <Switch>
                         <Route exact path="/">
                             <Redirect to="/loginPage" />

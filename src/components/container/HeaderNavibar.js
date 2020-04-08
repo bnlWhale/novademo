@@ -18,6 +18,13 @@ class HeaderNavibar extends React.Component {
 
     handleClick = e => {
 
+
+        switch(e.key){
+
+
+
+
+        }
         this.setState({
             current: e.key,
         });
@@ -29,12 +36,12 @@ class HeaderNavibar extends React.Component {
             <div className="header_panel">
                 <h1>NOVA</h1>
                 <Menu onClick={this.handleClick} selectedKeys={[this.state.current]} mode="horizontal">
-                    <Menu.Item key="mail">
+                    <Menu.Item key="home">
                         <Link to="/"/>
                         <MailOutlined/>
                         Home
                     </Menu.Item>
-                    <Menu.Item key="app">
+                    <Menu.Item key="schedule">
                         <AppstoreOutlined/>
                         <Link to="/aboutPage"/>
                         Schedule
@@ -49,10 +56,10 @@ class HeaderNavibar extends React.Component {
                         <AppstoreOutlined/>
                         Post
                     </Menu.Item>
-                    <Menu.Item key="about">
+                    <Menu.Item key="profile">
                         <Link to="/mainStage"/>
                         <AppstoreOutlined/>
-                       About
+                       Profile
                     </Menu.Item>
                 </Menu>
             </div>
