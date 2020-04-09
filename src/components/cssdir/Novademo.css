@@ -8,11 +8,18 @@
     z-index: 999;
 }
 
+.main_header_1{
+    top: 0;
+    height: 100px;
+    width: 100%;
+    background-color: pink;
+}
+
 .header_panel{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    margin: 20px;
+
 }
 
 .main_content{
@@ -54,9 +61,28 @@
 
 }
 .main_footer {
-    height: 100px;
+    padding: 100px;
     background-color: burlywood;
     flex-shrink: 0;
     margin-right:10px;
 
+}
+
+
+.divLayoutStyle{
+    display: flex;
+    flex-direction: column;
+    top:100px;
+    height: calc(100vh - 100px);
+}
+
+.divContentStyle{
+    flex: 1 0 auto;
+
+}
+
+.divFooterStyle{
+    flex-shrink: 0;
+    height: 100px;
+    background-color: burlywood;
 }

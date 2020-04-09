@@ -16,6 +16,7 @@ import {
 import HeaderNavibar from "./components/container/HeaderNavibar";
 import MainPage from "./components/container/MainPage";
 import LoginPage from "./components/container/LoginPage";
+import WelcomePage from "./components/container/WelcomePage";
 
 class App extends React.Component {
 
@@ -23,12 +24,15 @@ class App extends React.Component {
         return (
             <Router>
                 <div className="App">
-                    <div className="main_header">
-                        <HeaderNavibar/>
+
+
+                    <div className="main_header_1">
+                          <HeaderNavibar/>
+
                     </div>
                     <Switch>
                         <Route exact path="/">
-                            <Redirect to="/loginPage" />
+                            <Redirect to="/welcomePage" />
                         </Route>
 
                         <Route path="/mainStage">
@@ -39,6 +43,9 @@ class App extends React.Component {
                         </Route>
                         <Route path="/loginPage">
                             <LoginPage/>
+                        </Route>
+                        <Route path="/welcomePage">
+                            <WelcomePage/>
                         </Route>
                     </Switch>
 

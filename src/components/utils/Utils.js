@@ -57,6 +57,8 @@ export function getItemArray(num,key) {
 
 
 
+
+
 export function getTxtArray(num, key){
 
     let a = Array(num).fill(null);
