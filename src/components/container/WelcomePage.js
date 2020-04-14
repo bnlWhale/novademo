@@ -31,8 +31,4 @@ export default ()=>{
             </div>
         </div>
     )
-
-
-
-
 }
