@@ -2,26 +2,53 @@ import * as React from "react"
 import 'antd/dist/antd.css';
 import {Menu} from 'antd';
 import {Link, withRouter} from 'react-router-dom'
-import {
+import MergeCellsOutlined, {
     MailOutlined,
     AppstoreOutlined,
     SettingOutlined,
 } from '@ant-design/icons';
 
+import {connect} from "react-redux";
+import {ActionKey} from "../dataprocessor/dataActions";
+import axios from "../utils/AxiosAPI";
+
 const {SubMenu} = Menu;
 
 class HeaderNavibar extends React.Component {
 
-    state = {
-        current: 'mail',
-    };
+    constructor(props) {
+        super(props);
+        this.state = {
+            current: 'mail',
+        };
+    }
+
 
     handleClick = e => {
+       console.log("click handlclick");
+        const {dispatch} = this.props;
+        switch (e.key) {
+            case "schedule": {
+                dispatch({
+                    type: ActionKey.Login,
+                    val: 'bbbb',
+                })
+                this.sendRequest();
+                break;
+            }
 
+            case "security":{
+                dispatch({
+                    type: ActionKey.Login,
+                    val: 'cccc',
+                })
+                break;
 
-        switch(e.key){
+            }
 
-
+            default:{
+                break;
+            }
 
 
         }
@@ -31,7 +58,34 @@ class HeaderNavibar extends React.Component {
 
     };
 
+    componentDidMount(){
+        axios.interceptors.request.use((config) => {
+            // config.setHeaders([
+            //     // 在这里设置请求头与携带token信息
+            // ]);
+            console.log("axios interceptors");
+            return config
+        }, (error) => {
+            return Promise.reject(error);
+        });
+    }
+
+    sendRequest(){
+
+
+
+        axios.get('greeting').then(response=>{
+            let {id, content} = response.data;
+            alert(id+"  "+content);
+        }).catch(error=>{
+            alert("show error "+error);
+        });
+    }
+
     render() {
+
+        const {wasLogin, dispatch} = this.props;
+
         return (
             <div className="header_panel">
                 <h1>NOVA</h1>
@@ -59,7 +113,7 @@ class HeaderNavibar extends React.Component {
                     <Menu.Item key="profile">
                         <Link to="/mainStage"/>
                         <AppstoreOutlined/>
-                       Profile
+                        Profile
                     </Menu.Item>
                 </Menu>
             </div>
@@ -70,4 +124,12 @@ class HeaderNavibar extends React.Component {
     }
 }
 
-export default HeaderNavibar;
+const mapStateToProps = state => ({
+    wasLogin: state.wasLogin
+});
+
+
+export default connect(
+    mapStateToProps
+)(HeaderNavibar);
+

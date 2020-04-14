@@ -17,10 +17,14 @@ import HeaderNavibar from "./components/container/HeaderNavibar";
 import MainPage from "./components/container/MainPage";
 import LoginPage from "./components/container/LoginPage";
 import WelcomePage from "./components/container/WelcomePage";
+import LoadingIndicator from "./components/container/LoadingIndicator";
 
 class App extends React.Component {
 
     render() {
+
+        const {wasLogin} = this.props;
+        alert(wasLogin);
         return (
             <Router>
                 <div className="App">
@@ -28,7 +32,6 @@ class App extends React.Component {
 
                     <div className="main_header_1">
                           <HeaderNavibar/>
-
                     </div>
                     <Switch>
                         <Route exact path="/">
@@ -58,8 +61,6 @@ class App extends React.Component {
         );
 
     }
-
-
 }
 
 const mapStateToProps = state => ({

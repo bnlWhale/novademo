@@ -1,33 +1,33 @@
 import * as React from "react";
 
-const footerStyle = {
-    backgroundColor: "purple",
-    fontSize: "15px",
-    color: "white",
-    borderTop: "1px solid #E7E7E7",
-    textAlign: "center",
-    padding: "20px",
-    position: "fixed",
-    right: "0",
-    bottom: "0",
-    height: "50px",
+export function formatDate(dateString) {
 
-};
+    const date = new Date(dateString);
+    const monthNames = [
+        "January", "February", "March",
+        "April", "May", "June", "July",
+        "August", "September", "October",
+        "November", "December"
+    ];
 
-const phantomStyle = {
-    display: "block",
-    padding: "20px",
-    height: "50px",
+    const monthIndex = date.getMonth();
+    const year = date.getFullYear();
+    return monthNames[monthIndex] + ' ' + year;
+}
 
-};
+export function formatDateTime(dateTimeString) {
 
-export function Footer({children}) {
-    return (
-        <div>
-            <div style={phantomStyle}/>
-            <div style={footerStyle}>{children}</div>
-        </div>
-    );
+    const date = new Date(dateTimeString);
+    const monthNames = [
+        "Jan", "Feb", "Mar", "Apr",
+        "May", "Jun", "Jul", "Aug",
+        "Sep", "Oct", "Nov", "Dec"
+    ];
+
+    const monthIndex = date.getMonth();
+    const year = date.getFullYear();
+
+    return date.getDate() + ' ' + monthNames[monthIndex] + ' ' + year + ' - ' + date.getHours() + ':' + date.getMinutes();
 }
 
 let pTxt =
@@ -73,6 +73,20 @@ export function getTxtArray(num, key){
     })
 
     return b;
+}
 
+export function loadImageAsync(url) {
+    return new Promise(function(resolve, reject) {
+        const image = new Image();
 
+        image.onload = function() {
+            resolve(image);
+        };
+
+        image.onerror = function() {
+            reject(new Error('Could not load image at ' + url));
+        };
+
+        image.src = url;
+    });
 }
