@@ -1,15 +1,17 @@
+import {ActionKey} from "./dataActions";
+
 const initState = {
     books: [],
-    wasLogin: false,
+    wasLogin: 'aaaa',
 };
 
 export default (state = initState, action) => {
     switch (action.type) {
 
-        case "Login":{
+        case ActionKey.Login:{
             return {
               ...state,
-                wasLogin: true
+                wasLogin: action.val,
             }
         };
         case "Logout":{

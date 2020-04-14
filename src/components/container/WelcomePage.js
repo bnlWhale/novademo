@@ -1,5 +1,17 @@
 import * as React from "react";
-
+import LoadingIndicator from "./LoadingIndicator";
+import MergeCellsOutlined from '@ant-design/icons';
+import {
+    HomeOutlined,
+    SettingFilled,
+    SmileOutlined,
+    SyncOutlined,
+    LoadingOutlined,
+    WhatsAppOutlined,
+    SplitCellsOutlined,
+} from '@ant-design/icons';
+import { Spin } from 'antd';
+import UploadPage from "./UploadPage";
 
 const divLayoutStyle = {
     display: 'flex',
@@ -19,12 +31,21 @@ const divFooterStyle = {
     backgroundColor: 'burlywood',
 }
 
+
+
 export default ()=>{
 
     return(
         <div style={divLayoutStyle}>
             <div style={divContentStyle}>
-                <h1>welcome page ! </h1>
+
+                <h1> welcome page ! </h1>
+                <SyncOutlined spin />
+                <WhatsAppOutlined />
+                <SplitCellsOutlined size="large" />
+                <Spin size="large" />
+                <h1> welcome page ! </h1>
+                <UploadPage/>
             </div>
             <div style={divFooterStyle}>
                 footer
