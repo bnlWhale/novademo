@@ -24,7 +24,6 @@ class App extends React.Component {
     render() {
 
         const {wasLogin} = this.props;
-        alert(wasLogin);
         return (
             <Router>
                 <div className="App">
@@ -49,6 +48,9 @@ class App extends React.Component {
                         </Route>
                         <Route path="/welcomePage">
                             <WelcomePage/>
+                        </Route>
+                        <Route path="/homePage">
+                            <HomePage/>
                         </Route>
                     </Switch>
 

@@ -10,23 +10,25 @@ class UploadPage extends React.Component {
     };
 
 
-     config = {
-        onUploadProgress: function(progressEvent) {
-            const percentCompleted = Math.round( (progressEvent.loaded * 100) / progressEvent.total );
-            console.log("uploadPage:"+percentCompleted);
+    config = {
+        onUploadProgress: function (progressEvent) {
+            const percentCompleted = Math.round((progressEvent.loaded * 100) / progressEvent.total);
+            console.log("uploadPage:" + percentCompleted);
         },
-        showRespState: e=>{
+        showRespState: e => {
             console.log(e);
         }
     };
-
 
 
     // On file select (from the pop up)
     onFileChange = event => {
 
         // Update the state
-        this.setState({ selectedFile: event.target.files[0] });
+        this.setState({
+            selectedFile: event.target.files[0],
+            selectedFilePath: event.target.files[0].mozFullPath
+        });
 
     };
 
@@ -44,27 +46,25 @@ class UploadPage extends React.Component {
         );
 
         // Details of the uploaded file
-        console.log(this.state.selectedFile);
+        console.log("file path:"+this.state.selectedFilePath);
 
         // Request made to the backend api
         // Send formData object
-       // axios.post("api/uploadfile", formData);
-        axios.post('uploadFile', formData, this.config).then(response=>{
-           console.log("upload file:"+response.config);
-           this.showObject(response.config);
+
+        axios.post('uploadFile', formData, this.config).then(response => {
+            console.log("upload file:" + response.config);
+            this.showObject(response.config);
             response.config.showRespState(response.status);
-        }).catch(error=>{
-            console.log("upload file:"+error);
+        }).catch(error => {
+            console.log("upload file:" + error);
         });
     };
 
-    showObject = obj =>{
-        for(let key in obj){
-           console.log(key)
+    showObject = obj => {
+        for (let key in obj) {
+            console.log(key)
         }
     }
-
-
 
 
     // File content to be displayed after
@@ -87,7 +87,7 @@ class UploadPage extends React.Component {
         } else {
             return (
                 <div>
-                    <br />
+                    <br/>
                     <h4>Choose before Pressing the Upload button</h4>
                 </div>
             );
@@ -105,7 +105,7 @@ class UploadPage extends React.Component {
                     File Upload using React!
                 </h3>
                 <div>
-                    <input type="file" onChange={this.onFileChange} />
+                    <input type="file" onChange={this.onFileChange}/>
                     <button onClick={this.onFileUpload}>
                         Upload!
                     </button>

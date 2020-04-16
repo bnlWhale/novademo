@@ -11,6 +11,8 @@ import MergeCellsOutlined, {
 import {connect} from "react-redux";
 import {ActionKey} from "../dataprocessor/dataActions";
 import axios from "../utils/AxiosAPI";
+import 'antd/dist/antd.css';
+import { Progress, Button } from 'antd';
 
 const {SubMenu} = Menu;
 
@@ -111,11 +113,12 @@ class HeaderNavibar extends React.Component {
                         Post
                     </Menu.Item>
                     <Menu.Item key="profile">
-                        <Link to="/mainStage"/>
+                        <Link to="/homePage"/>
                         <AppstoreOutlined/>
                         Profile
                     </Menu.Item>
                 </Menu>
+                <Progress percent={50}/>
             </div>
 
 

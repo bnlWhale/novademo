@@ -12,6 +12,8 @@ import {
     useParams,
     useRouteMatch
 } from "react-router-dom";
+import ImageFile from "./ImageFile";
+import PreviewImageUpload from "./PreviewImageUpload";
 
 function MainStage() {
 
@@ -49,6 +51,15 @@ function Topic() {
     // of the URL indicates a placeholder that we can
     // get from `useParams()`.
     let { topicId } = useParams();
+    switch (topicId) {
+        case "components":
+            topicId = <ImageFile/>;
+            break;
+        case "rendering":
+            topicId = <PreviewImageUpload/>;
+        default:break;
+    }
+
 
     return (
         <div>

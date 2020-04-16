@@ -1,6 +1,7 @@
 import "../cssdir/HomePageCss.css"
 import * as React from "react";
 import {getTxtArray, getItemArray} from "../utils/Utils";
+import PreviewImageUpload from "./PreviewImageUpload";
 
 class HomePage extends React.Component{
 
@@ -12,7 +13,15 @@ class HomePage extends React.Component{
 
         return(
             <div>
-                {getTxtArray(22,"MainStage_right_content")}
+                <div>
+                    <PreviewImageUpload/>
+                </div>
+                <div>
+                    {getTxtArray(22,"MainStage_right_content")}
+                </div>
+                <div className="main_footer">
+                    footer
+                </div>
             </div>
 
         )
