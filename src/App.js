@@ -19,6 +19,9 @@ import LoginPage from "./components/container/LoginPage";
 import WelcomePage from "./components/container/WelcomePage";
 import LoadingIndicator from "./components/container/LoadingIndicator";
 
+
+
+
 class App extends React.Component {
 
     render() {
@@ -29,7 +32,7 @@ class App extends React.Component {
                 <div className="App">
 
 
-                    <div className="main_header_1">
+                    <div className="header_panel">
                           <HeaderNavibar/>
                     </div>
                     <Switch>

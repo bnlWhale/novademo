@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 import axios from "../utils/AxiosAPI";
 
 class UploadPage extends React.Component {
@@ -13,7 +13,7 @@ class UploadPage extends React.Component {
     config = {
         onUploadProgress: function (progressEvent) {
             const percentCompleted = Math.round((progressEvent.loaded * 100) / progressEvent.total);
-            console.log("uploadPage:" + percentCompleted);
+            console.log("uploadPage onUploadProgress:" + percentCompleted);
         },
         showRespState: e => {
             console.log(e);

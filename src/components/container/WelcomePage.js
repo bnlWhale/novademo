@@ -12,6 +12,7 @@ import {
 } from '@ant-design/icons';
 import { Spin } from 'antd';
 import UploadPage from "./UploadPage";
+import FileUploadHook from "./FileUploadHook";
 
 const divLayoutStyle = {
     display: 'flex',
@@ -45,6 +46,7 @@ export default ()=>{
                 <SplitCellsOutlined size="large" />
                 <Spin size="large" />
                 <h1> welcome page ! </h1>
+                <FileUploadHook/>
                 <UploadPage/>
             </div>
             <div style={divFooterStyle}>

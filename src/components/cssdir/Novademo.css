@@ -8,19 +8,25 @@
     z-index: 999;
 }
 
-.main_header_1{
-    top: 0;
-    height: 100px;
-    width: 100%;
+
+
+.header_panel{
+    max-height: 100px;
+    min-height: 100px;
+    border: 5px solid rgb(111,41,97);
+    border-radius: .5em;
     background-color: pink;
 }
 
-.header_panel{
+.head_content{
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: flex-end;
-
+    flex-flow: column;
+    margin-top: 10px;
+}
+.sub_head_content{
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-end;
 }
 
 .main_content{

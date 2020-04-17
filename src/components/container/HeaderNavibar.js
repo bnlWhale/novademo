@@ -16,6 +16,15 @@ import { Progress, Button } from 'antd';
 
 const {SubMenu} = Menu;
 
+const divLayoutStyle = {
+    display: 'flex',
+    width: '100%',
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+};
+
+
+
 class HeaderNavibar extends React.Component {
 
     constructor(props) {
@@ -84,42 +93,46 @@ class HeaderNavibar extends React.Component {
         });
     }
 
+
     render() {
 
         const {wasLogin, dispatch} = this.props;
 
         return (
-            <div className="header_panel">
-                <h1>NOVA</h1>
-                <Menu onClick={this.handleClick} selectedKeys={[this.state.current]} mode="horizontal">
-                    <Menu.Item key="home">
-                        <Link to="/"/>
-                        <MailOutlined/>
-                        Home
-                    </Menu.Item>
-                    <Menu.Item key="schedule">
-                        <AppstoreOutlined/>
-                        <Link to="/aboutPage"/>
-                        Schedule
-                    </Menu.Item>
-                    <Menu.Item key="security">
-                        <Link to="/mainStage"/>
-                        <AppstoreOutlined/>
-                        Login || Register
-                    </Menu.Item>
-                    <Menu.Item key="jobInfo">
-                        <Link to="/mainStage"/>
-                        <AppstoreOutlined/>
-                        Post
-                    </Menu.Item>
-                    <Menu.Item key="profile">
-                        <Link to="/homePage"/>
-                        <AppstoreOutlined/>
-                        Profile
-                    </Menu.Item>
-                </Menu>
-                <Progress percent={50}/>
+            <div  className="head_content">
+                <div className="sub_head_content">
+                    <h1 style={divLayoutStyle}>NOVA</h1>
+                    <Menu onClick={this.handleClick} selectedKeys={[this.state.current]} mode="horizontal">
+                        <Menu.Item key="home">
+                            <Link to="/"/>
+                            <MailOutlined/>
+                            Home
+                        </Menu.Item>
+                        <Menu.Item key="schedule">
+                            <AppstoreOutlined/>
+                            <Link to="/aboutPage"/>
+                            Schedule
+                        </Menu.Item>
+                        <Menu.Item key="security">
+                            <Link to="/mainStage"/>
+                            <AppstoreOutlined/>
+                            Login || Register
+                        </Menu.Item>
+                        <Menu.Item key="jobInfo">
+                            <Link to="/mainStage"/>
+                            <AppstoreOutlined/>
+                            Post
+                        </Menu.Item>
+                        <Menu.Item key="profile">
+                            <Link to="/homePage"/>
+                            <AppstoreOutlined/>
+                            Profile
+                        </Menu.Item>
+                    </Menu>
+                </div>
+                <Progress strokeWidth={5} percent={50}/>
             </div>
+
 
 
         )
