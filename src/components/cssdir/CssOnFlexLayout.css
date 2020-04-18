@@ -1,0 +1,20 @@
+.container {
+    top:100px;
+    display: flex;
+    background-color: coral;
+    border: 3px solid #282c34;
+}
+
+.item {
+    background-color: brown;
+    border: 2px solid blue;
+    text-align: center;
+
+    flex-grow: 1;
+    height: 100px;
+
+}
+
+.item + .item {
+    margin-left: 2%;
+}

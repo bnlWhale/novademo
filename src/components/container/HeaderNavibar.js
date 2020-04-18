@@ -110,7 +110,7 @@ class HeaderNavibar extends React.Component {
                         </Menu.Item>
                         <Menu.Item key="schedule">
                             <AppstoreOutlined/>
-                            <Link to="/aboutPage"/>
+                            <Link to="/layoutTest"/>
                             Schedule
                         </Menu.Item>
                         <Menu.Item key="security">

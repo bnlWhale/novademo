@@ -18,6 +18,8 @@ import MainPage from "./components/container/MainPage";
 import LoginPage from "./components/container/LoginPage";
 import WelcomePage from "./components/container/WelcomePage";
 import LoadingIndicator from "./components/container/LoadingIndicator";
+import LayoutWithFlex from "./components/container/LayoutWithFlex";
+import FlexboxLayoutPatterns from "./components/container/FlexboxLayoutPatterns";
 
 
 
@@ -37,7 +39,7 @@ class App extends React.Component {
                     </div>
                     <Switch>
                         <Route exact path="/">
-                            <Redirect to="/welcomePage" />
+                            <Redirect to="/flexLayoutPattern" />
                         </Route>
 
                         <Route path="/mainStage">
@@ -54,6 +56,12 @@ class App extends React.Component {
                         </Route>
                         <Route path="/homePage">
                             <HomePage/>
+                        </Route>
+                        <Route path="/layoutTest">
+                            <LayoutWithFlex/>
+                        </Route>
+                        <Route path="/flexLayoutPattern">
+                            <FlexboxLayoutPatterns/>
                         </Route>
                     </Switch>
 

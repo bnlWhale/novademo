@@ -1,0 +1,52 @@
+.main_content_test{
+    display: flex;
+    flex-direction: column;
+    top: 100px;
+    height: calc(100vh - 100px);
+}
+
+.main_sub_content_test{
+    flex: 1;
+    background-color: coral;
+    border: 3px solid #282c34;
+    text-align: center;
+}
+
+.main_content_item, .main_content_item_1{
+    background-color: brown;
+    border: 2px solid blue;
+    flex: 0 1 auto;
+    margin: 10px;
+
+    color: white;
+    font-weight: bold;
+    font-size: 2em;
+    text-align: center;
+    height:110px;
+}
+
+.main_content_item_1{
+    height:200px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+.sub_item_test{
+    background-color: #61dafb;
+    border: 2px solid blue;
+    margin: 5px;
+
+
+    text-align: center;
+
+
+
+}
+
+.main_footer_test{
+    height: 100px;
+    border: 3px solid chartreuse;
+    flex: 0 0 auto;
+}
