@@ -16,18 +16,30 @@
     border: 5px solid rgb(111,41,97);
     border-radius: .5em;
     background-color: pink;
+    height: 100px;
 }
 
 .head_content{
     display: flex;
     flex-flow: column;
     margin-top: 10px;
+
 }
 .sub_head_content{
     display: flex;
     flex-flow: row;
     justify-content: flex-end;
+    flex-grow: 2;
 }
+
+.head_item_9{
+   flex: 1 1 auto;
+}
+
+.head_item_1{
+    flex-grow: 1;
+}
+
 
 .main_content{
     display: flex;
