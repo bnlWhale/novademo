@@ -130,7 +130,15 @@ class HeaderNavibar extends React.Component {
                         </Menu.Item>
                     </Menu>
                 </div>
-                <Progress className="head_item_1" strokeWidth={50} percent={50}/>
+                <div className="head_item_1">
+                    <Progress  strokeWidth={3} percent={50}/>
+
+                </div>
+                <div>
+                    <button>button 1</button>
+                    <button>button 1</button>
+                </div>
+
             </div>
 
 

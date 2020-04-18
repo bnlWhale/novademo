@@ -23,21 +23,17 @@
     display: flex;
     flex-flow: column;
     margin-top: 10px;
-
+    overflow: auto;
 }
 .sub_head_content{
     display: flex;
     flex-flow: row;
     justify-content: flex-end;
-    flex-grow: 2;
-}
-
-.head_item_9{
-   flex: 1 1 auto;
+    overflow: auto;
 }
 
 .head_item_1{
-    flex-grow: 1;
+    overflow: auto;
 }
 
 

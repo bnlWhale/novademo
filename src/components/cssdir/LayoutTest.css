@@ -29,21 +29,28 @@
     height:200px;
     display: flex;
     flex-direction: column;
-
+    overflow: auto;
 }
 
 
 .sub_item_test{
     background-color: #61dafb;
     border: 2px solid blue;
-    margin: 5px;
-
 
     text-align: center;
+    height: 20%;
+}
 
+.sub_item_test_4{
+    background-color: #61dafb;
+    border: 2px solid blue;
 
+    text-align: center;
+    height: 80%;
 
 }
+
+
 
 .main_footer_test{
     height: 100px;
