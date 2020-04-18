@@ -34,7 +34,7 @@ class App extends React.Component {
                 <div className="App">
 
 
-                    <div className="header_panel">
+                    <div>
                           <HeaderNavibar/>
                     </div>
                     <Switch>

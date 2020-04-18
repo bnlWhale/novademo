@@ -19,8 +19,10 @@ const {SubMenu} = Menu;
 const divLayoutStyle = {
     display: 'flex',
     width: '100%',
+    height: '100%',
     flexDirection: 'row',
-    justifyContent: 'space-around',
+    justifyContent: 'center',
+    alignItems: 'center',
 };
 
 
@@ -131,14 +133,13 @@ class HeaderNavibar extends React.Component {
                     </Menu>
                 </div>
                 <div className="head_item_1">
-                    <Progress  strokeWidth={3} percent={50}/>
-
+                    <Progress  strokeWidth={5} percent={20} width={200}/>
                 </div>
-                <div>
-                    <button>button 1</button>
-                    <button>button 1</button>
-                </div>
+                {/*
 
+
+
+                */}
             </div>
 
 

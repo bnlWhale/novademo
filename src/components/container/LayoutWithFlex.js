@@ -11,8 +11,9 @@ export default ()=>{
                 <div className="main_content_item"> item_0</div>
                 <div className="main_content_item"> item_1</div>
                 <div className="main_content_item_1">
-                    <div className="sub_item_test"> sub_item_0</div>
 
+                    <div className="sub_item_test"> sub_item_0</div>
+                    <div className="sub_item_test"> sub_item_0</div>
                     <div className="sub_item_test_4"> sub_item_2</div>
                 </div>
             </div>
