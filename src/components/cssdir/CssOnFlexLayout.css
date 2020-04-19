@@ -4,33 +4,98 @@
     flex-direction: column;
     background-color: coral;
     border: 3px solid burlywood;
-    height: 100vh;
+    min-height: 100vh;
+    margin-bottom: 2%;
 }
 
-.container_1{
-    display: flex;
-    background-color: coral;
-    border: 3px solid #282c34;
-}
-
-.item_1 {
-    background-color: brown;
+.item_container {
+    background-color: antiquewhite;
     border: 2px solid blue;
     text-align: center;
 
-    flex-grow: 1;
+    flex: 1 1 auto;
+    height: 200px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.item_container + .item_container {
+    margin-left: 2%;
+    margin-top:  2%;
+    margin-right:  2%;
+}
+
+
+/*  **********************************  id:1 */
+
+.container_id_1{
+    display: flex;
+}
+.item_id_1 {
+    background-color: coral;
     height: 100px;
+    width: 100px; /* A fixed width as the default */
+    margin: 20px;
+}
+
+.item_id_1_center {
+    background-color: coral;
+    flex-grow: 1; /* Set the middle element to grow and stretch */
 
 }
 
-.item_1 + .item_1 {
+.item_id_1 + .item_id_1 {
     margin-left: 2%;
 }
 
-
-/*  ********************************** */
-.container_2{
+/*  **********************************  id:2 */
+.container_id_2{
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    overflow-y: auto;
+}
+
+.item_id_2 {
     background-color: coral;
-    border: 3px solid #282c34;
+    width: 48%;
+    height: 50px; /* A fixed width as the default */
+    margin-bottom: 2%;
+}
+.item_id_2:nth-child(3n) {
+    width: 100%;
+}
+
+/*  ********************************** id:3 */
+.container_id_3{
+    border: 3px solid burlywood;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    overflow-y: auto;
+}
+
+.item_id_3 {
+    background-color: coral;
+    flex: 0 32%;
+    height: 50px;
+    margin-bottom: 2%;
+}
+
+/*  ********************************** id:4 */
+.container_id_4{
+    border: 3px solid burlywood;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    overflow-y: auto;
+}
+
+.item_id_4 {
+    background-color: coral;
+    width: 32%;
+    padding-bottom: 32%; /* Same as width, sets height */
+    margin-bottom: 2%; /* (100-32*3)/2 */
+    position: relative;
 }

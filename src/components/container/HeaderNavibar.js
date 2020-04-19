@@ -25,6 +25,13 @@ const divLayoutStyle = {
     alignItems: 'center',
 };
 
+const menuStyle = {
+    display: 'flex',
+    width: '100%',
+    height: '100%',
+    justifyContent: 'flex-end',
+    alignItems: 'flex-end',
+};
 
 
 class HeaderNavibar extends React.Component {
@@ -104,7 +111,7 @@ class HeaderNavibar extends React.Component {
             <div  className="head_content">
                 <div className="sub_head_content">
                     <h1 style={divLayoutStyle}>NOVA</h1>
-                    <Menu onClick={this.handleClick} selectedKeys={[this.state.current]} mode="horizontal">
+                    <Menu   style={menuStyle}   onClick={this.handleClick} selectedKeys={[this.state.current]} mode="horizontal">
                         <Menu.Item key="home">
                             <Link to="/"/>
                             <MailOutlined/>
