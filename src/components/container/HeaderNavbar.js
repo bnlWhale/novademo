@@ -27,10 +27,9 @@ const divLayoutStyle = {
 
 const menuStyle = {
     display: 'flex',
-    width: '100%',
-    height: '100%',
     justifyContent: 'flex-end',
     alignItems: 'flex-end',
+
 };
 
 
