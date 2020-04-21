@@ -1,3 +1,5 @@
 import { createStore } from "redux";
 import dataReducer from "./dataReducer";
-export default createStore(dataReducer);
+const dataStore = createStore(dataReducer);
+
+export default  dataStore;

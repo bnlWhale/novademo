@@ -1,5 +1,5 @@
 import * as React from "react";
-import HeaderNavibar from "./HeaderNavibar";
+import HeaderNavibar from "./HeaderNavbar";
 import "../cssdir/Novademo.css";
 
 const divStyle = {

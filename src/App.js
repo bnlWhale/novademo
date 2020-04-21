@@ -13,7 +13,7 @@ import {
     Route,
     Switch
 } from 'react-router-dom';
-import HeaderNavibar from "./components/container/HeaderNavibar";
+import HeaderNavibar from "./components/container/HeaderNavbar";
 import MainPage from "./components/container/MainPage";
 import LoginPage from "./components/container/LoginPage";
 import WelcomePage from "./components/container/WelcomePage";

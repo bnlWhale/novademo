@@ -29,11 +29,16 @@ const menuStyle = {
     display: 'flex',
     justifyContent: 'flex-end',
     alignItems: 'flex-end',
-
 };
 
+const progressbarStyle = {
+    display: 'flex',
+    justifyContent: 'flex-end',
+    alignItems: 'flex-end',
+    width: '99%',
+};
 
-class HeaderNavibar extends React.Component {
+class HeaderNavbar extends React.Component {
 
     constructor(props) {
         super(props);
@@ -139,7 +144,7 @@ class HeaderNavibar extends React.Component {
                     </Menu>
                 </div>
                 <div className="head_item_1">
-                    <Progress  strokeWidth={5} percent={20} width={200}/>
+                    <Progress  style={progressbarStyle} strokeWidth={5} percent={20} width={200}/>
                 </div>
                 {/*
 
@@ -162,5 +167,5 @@ const mapStateToProps = state => ({
 
 export default connect(
     mapStateToProps
-)(HeaderNavibar);
+)(HeaderNavbar);
 
