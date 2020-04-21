@@ -6,11 +6,7 @@ import  { useState } from 'react';
 import { connect } from "react-redux";
 
 
-const mapStateToProps = state => ({
-    isShowResultPanel: state.isShowResultPanel
-});
-
-export default  connect(mapStateToProps)() => {
+const FlexboxLayoutPatterns = ()=> {
 
     const[isShowResultPanel] = useState(false);
 
@@ -73,7 +69,13 @@ export default  connect(mapStateToProps)() => {
 
         )
     }
-
-
-
 }
+
+const mapStateToProps = state => ({
+    isShowResultPanel: state.isShowResultPanel
+})
+
+
+export default connect(
+    mapStateToProps
+)(FlexboxLayoutPatterns);
