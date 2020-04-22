@@ -70,6 +70,13 @@ class HeaderNavbar extends React.Component {
 
             }
 
+            case "jobInfo":{
+                dispatch({
+                    type: ActionKey.ShowResultPanel,
+                    val: true,
+                })
+            }
+
             default:{
                 break;
             }
@@ -95,8 +102,6 @@ class HeaderNavbar extends React.Component {
     }
 
     sendRequest(){
-
-
 
         axios.get('greeting').then(response=>{
             let {id, content} = response.data;
@@ -132,9 +137,8 @@ class HeaderNavbar extends React.Component {
                             Login || Register
                         </Menu.Item>
                         <Menu.Item key="jobInfo">
-                            <Link to="/mainStage"/>
                             <AppstoreOutlined/>
-                            Post
+                            Dispatch Action
                         </Menu.Item>
                         <Menu.Item key="profile">
                             <Link to="/homePage"/>

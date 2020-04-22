@@ -3,16 +3,21 @@ import '../cssdir/CssOnFlexLayout.css'
 import 'antd/dist/antd.css';
 import {Progress, Button} from 'antd';
 import  { useState } from 'react';
+import { useSelector } from 'react-redux'
 import { connect } from "react-redux";
+import {getSingle} from "../utils/ToolSingleton";
 
 
-const FlexboxLayoutPatterns = ()=> {
 
-    const[isShowResultPanel] = useState(false);
+export const FlexboxLayoutPatterns = () => {
 
+
+    const isShowResultPanel = useSelector(state=>state.ShowResultPanel);
+    console.log('FlexboxLayoutPatterns '+isShowResultPanel);
     if(isShowResultPanel){
+        const panel = getSingle();
         return(
-            <div> <h1> show panel</h1> </div>
+            <div> {panel} </div>
         )
     }else{
         return(
@@ -70,12 +75,3 @@ const FlexboxLayoutPatterns = ()=> {
         )
     }
 }
-
-const mapStateToProps = state => ({
-    isShowResultPanel: state.isShowResultPanel
-})
-
-
-export default connect(
-    mapStateToProps
-)(FlexboxLayoutPatterns);

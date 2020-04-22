@@ -23,6 +23,7 @@ store.dispatch(...)
 import * as React from 'react';
 import { Result, Button } from 'antd';
 
+let result;
 const creatResultPanel =()=>{
     return(
         <Result
@@ -37,15 +38,15 @@ const creatResultPanel =()=>{
     )
 }
 
-const getSingle = fn => {
-    alert("get result panel");
-    let result;
+const createSingle = fn => {
+    alert("init get result panel "+result);
     return function () {
         return result || (result = fn.apply(this, arguments));
     }
 };
+export function getSingle(){
+    return createSingle(creatResultPanel)();
+}
 
-const SingleResultPanel =  getSingle(creatResultPanel);
 
-export default SingleResultPanel;
 

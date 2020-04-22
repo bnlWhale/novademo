@@ -19,7 +19,7 @@ import LoginPage from "./components/container/LoginPage";
 import WelcomePage from "./components/container/WelcomePage";
 import LoadingIndicator from "./components/container/LoadingIndicator";
 import LayoutWithFlex from "./components/container/LayoutWithFlex";
-import FlexboxLayoutPatterns from "./components/container/FlexboxLayoutPatterns";
+import {FlexboxLayoutPatterns} from "./components/container/FlexboxLayoutPatterns";
 
 
 
@@ -32,7 +32,6 @@ class App extends React.Component {
         return (
             <Router>
                 <div className="App">
-
 
                     <div>
                           <HeaderNavibar/>

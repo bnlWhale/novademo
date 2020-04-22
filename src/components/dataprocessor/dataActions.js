@@ -1,6 +1,6 @@
 export const ActionKey={
     Login:'Login',
-
+    ShowResultPanel:'showResultPanel',
 
 
 }
