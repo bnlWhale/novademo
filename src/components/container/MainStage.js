@@ -14,6 +14,7 @@ import {
 } from "react-router-dom";
 import ImageFile from "./ImageFile";
 import PreviewImageUpload from "./PreviewImageUpload";
+import FileUploadHook from "./FileUploadHook";
 
 function MainStage() {
 
@@ -57,6 +58,10 @@ function Topic() {
             break;
         case "rendering":
             topicId = <PreviewImageUpload/>;
+            break;
+        case "props-v-state":
+            topicId = <FileUploadHook/>;
+            break;
         default:break;
     }
 

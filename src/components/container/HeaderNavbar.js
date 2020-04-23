@@ -47,10 +47,10 @@ class HeaderNavbar extends React.Component {
         };
     }
 
-
     handleClick = e => {
-       console.log("click handlclick");
+       console.log("HeaderNavbar click handlclick");
         const {dispatch} = this.props;
+        dispatch({ type: ActionKey.ProgressNum, val:0 });
         switch (e.key) {
             case "schedule": {
                 dispatch({
@@ -114,7 +114,7 @@ class HeaderNavbar extends React.Component {
 
     render() {
 
-        const {wasLogin, dispatch} = this.props;
+        const {wasLogin, dispatch, progressNum} = this.props;
 
         return (
             <div  className="head_content">
@@ -126,10 +126,10 @@ class HeaderNavbar extends React.Component {
                             <MailOutlined/>
                             Home
                         </Menu.Item>
-                        <Menu.Item key="schedule">
+                        <Menu.Item key="editor">
                             <AppstoreOutlined/>
-                            <Link to="/layoutTest"/>
-                            Schedule
+                            <Link to="/postEditorPage"/>
+                            Editor Post
                         </Menu.Item>
                         <Menu.Item key="security">
                             <Link to="/mainStage"/>
@@ -148,7 +148,7 @@ class HeaderNavbar extends React.Component {
                     </Menu>
                 </div>
                 <div className="head_item_1">
-                    <Progress  style={progressbarStyle} strokeWidth={5} percent={20} width={200}/>
+                    <Progress  style={progressbarStyle} strokeWidth={5} percent={progressNum} width={200}/>
                 </div>
                 {/*
 
@@ -165,7 +165,8 @@ class HeaderNavbar extends React.Component {
 }
 
 const mapStateToProps = state => ({
-    wasLogin: state.wasLogin
+    wasLogin: state.wasLogin,
+    progressNum:state.ProgressNum,
 });
 
 

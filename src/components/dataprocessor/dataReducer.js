@@ -1,39 +1,42 @@
 import {ActionKey} from "./dataActions";
 
 const initState = {
-    books: [],
-    wasLogin: 'aaaa',
-    ShowResultPanel:false,
+    wasLogin: false,
+    ShowResultPanel: false,
+    ProgressNum:0,
+
 };
 
 export default (state = initState, action) => {
-    console.log("dataReduce:"+action.type+' '+state.ShowResultPanel);
+    console.log("dataReduce:" + action.type + ' ' + state.ShowResultPanel);
     switch (action.type) {
 
-        case ActionKey.Login:{
+        case ActionKey.Login: {
             return {
-              ...state,
+                ...state,
                 wasLogin: action.val,
             }
-        };
-
-        case ActionKey.ShowResultPanel:{
-            return{
-                ...state,
-                ShowResultPanel: !state.ShowResultPanel,
-            }
-
-
         }
+            ;
 
-        case "Logout":{
+        case ActionKey.ShowResultPanel: {
             return {
                 ...state,
-                wasLogin: false
-            }
-        };
+                ShowResultPanel: !state.ShowResultPanel,
+            };
+        }
+
+        case ActionKey.ProgressNum: {
+            return {
+                ...state,
+                ProgressNum: action.val,
+            };
+        }
+
+
         default: {
             return state;
         }
     }
-};
+}
+;

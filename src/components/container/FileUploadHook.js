@@ -1,10 +1,14 @@
 import React, { useState } from 'react';
 import axios from "../utils/AxiosAPI";
+import { useSelector, useDispatch } from 'react-redux'
+import {ActionKey} from "../dataprocessor/dataActions";
+
 
 export default ()=>{
 
    const[selectedFile, setSelectedFile] = useState(null);
    const[selectedFilePath, setSelectedFilePath] = useState(null);
+   const dispatch = useDispatch()
 
    const onFileUploadHook = () => {
 
@@ -35,6 +39,7 @@ export default ()=>{
     const config = {
         onUploadProgress: function (progressEvent) {
             const percentCompleted = Math.round((progressEvent.loaded * 100) / progressEvent.total);
+            dispatch({ type: ActionKey.ProgressNum, val:percentCompleted });
             console.log("uploadPage:" + percentCompleted);
         },
         showRespState: e => {

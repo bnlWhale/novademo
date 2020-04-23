@@ -17,9 +17,9 @@ import HeaderNavibar from "./components/container/HeaderNavbar";
 import MainPage from "./components/container/MainPage";
 import LoginPage from "./components/container/LoginPage";
 import WelcomePage from "./components/container/WelcomePage";
-import LoadingIndicator from "./components/container/LoadingIndicator";
 import LayoutWithFlex from "./components/container/LayoutWithFlex";
 import {FlexboxLayoutPatterns} from "./components/container/FlexboxLayoutPatterns";
+import PostEditorPage from "./components/container/PostEditorPage";
 
 
 
@@ -61,6 +61,9 @@ class App extends React.Component {
                         </Route>
                         <Route path="/flexLayoutPattern">
                             <FlexboxLayoutPatterns/>
+                        </Route>
+                        <Route path="/postEditorPage">
+                            <PostEditorPage/>
                         </Route>
                     </Switch>
 
