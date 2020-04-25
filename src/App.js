@@ -20,6 +20,8 @@ import WelcomePage from "./components/container/WelcomePage";
 import LayoutWithFlex from "./components/container/LayoutWithFlex";
 import {FlexboxLayoutPatterns} from "./components/container/FlexboxLayoutPatterns";
 import PostEditorPage from "./components/container/PostEditorPage";
+import EditPost from "./components/container/EditPost";
+import CommentForm from "./components/container/CommentForm";
 
 
 

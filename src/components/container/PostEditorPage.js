@@ -4,7 +4,15 @@ import { Editor } from 'react-draft-wysiwyg';
 import draftToHtml from 'draftjs-to-html';
 import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
 import '../cssdir/WYSIWYGComponentCss.css';
+import styled from 'styled-components';
 
+
+const EditorStyled = styled.div`
+  width: ${() => "calc(100% - 40px)"};
+  min-height: 400px;
+  margin: 20px;
+  border: 1px solid black;
+`;
 
 class PostEditorPage extends Component {
     state = {
@@ -16,6 +24,7 @@ class PostEditorPage extends Component {
             editorState,
         });
     };
+
 
 
       uploadImageCallBack = (file)=> {
@@ -44,8 +53,7 @@ class PostEditorPage extends Component {
         return (
 
             <div  className="editor_container">
-
-                <div className="editor_sub_item">
+                <div className= "editor_sub_item">
                     <Editor
                         editorState={editorState}
                         onEditorStateChange={this.onEditorStateChange}
@@ -58,22 +66,19 @@ class PostEditorPage extends Component {
                             image: { uploadCallback: this.uploadImageCallBack, alt: { present: true, mandatory: true } },
                         }}
                     />
-                    <textarea
-                        disabled
-                        value={draftToHtml(convertToRaw(editorState.getCurrentContent()))}
-                    />
                 </div>
-
-
-                <div className="editor_sub_item">
-
-                </div>
-
 
                 <div className="editor_sub_item_1">
-                    <button> <h1> submit </h1></button>
+                    <button >  submit_1 </button>
                 </div>
 
+
+
+
+                {/*<textarea
+                        disabled
+                        value={draftToHtml(convertToRaw(editorState.getCurrentContent()))}
+                    />*/}
 
             </div>
         );
