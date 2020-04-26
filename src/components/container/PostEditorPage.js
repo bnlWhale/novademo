@@ -26,25 +26,20 @@ class PostEditorPage extends Component {
     };
 
 
-    uploadImageCallBack = (file) => {
-        return new Promise(
-            (resolve, reject) => {
-                const xhr = new XMLHttpRequest();
-                xhr.open('POST', 'https://api.imgur.com/3/image');
-                xhr.setRequestHeader('Authorization', 'Client-ID XXXXX');
-                const data = new FormData();
-                data.append('image', file);
-                xhr.send(data);
-                xhr.addEventListener('load', () => {
-                    const response = JSON.parse(xhr.responseText);
-                    resolve(response);
-                });
-                xhr.addEventListener('error', () => {
-                    const error = JSON.parse(xhr.responseText);
-                    reject(error);
-                });
-            }
-        );
+     uploadCB = (file) => {
+        const formData = new FormData();
+        formData.append('file', file);
+
+
+    }
+
+
+     onSubmit = (e) => {
+        e.preventDefault()
+
+
+
+
     }
 
     render() {
@@ -56,18 +51,11 @@ class PostEditorPage extends Component {
                     <Editor
                         editorState={editorState}
                         onEditorStateChange={this.onEditorStateChange}
-                        toolbar={{
-                            inline: { inDropdown: true },
-                            list: { inDropdown: true },
-                            textAlign: { inDropdown: true },
-                            link: { inDropdown: true },
-                            history: { inDropdown: true },
-                            image: { uploadCallback: this.uploadImageCallBack, alt: { present: true, mandatory: true } },
-                        }}
+                        toolbar={{ image: { uploadEnabled: true, uploadCallback: this.uploadCB, previewImage: true }}}
                     />
                 </div>
                 <div className="editor_sub_item_1">
-                    <button> submit_1</button>
+                    <button onClick={this.onSubmit}> submit_1</button>
                 </div>
 
 
