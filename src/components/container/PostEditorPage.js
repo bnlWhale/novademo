@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import { EditorState, convertToRaw } from 'draft-js';
-import { Editor } from 'react-draft-wysiwyg';
+import React, {Component} from 'react';
+import {EditorState, convertToRaw} from 'draft-js';
+import {Editor} from 'react-draft-wysiwyg';
 import draftToHtml from 'draftjs-to-html';
 import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
 import '../cssdir/WYSIWYGComponentCss.css';
@@ -26,8 +26,7 @@ class PostEditorPage extends Component {
     };
 
 
-
-      uploadImageCallBack = (file)=> {
+    uploadImageCallBack = (file) => {
         return new Promise(
             (resolve, reject) => {
                 const xhr = new XMLHttpRequest();
@@ -49,11 +48,11 @@ class PostEditorPage extends Component {
     }
 
     render() {
-        const { editorState } = this.state;
+        const {editorState} = this.state;
         return (
 
-            <div  className="editor_container">
-                <div className= "editor_sub_item">
+            <div className="editor_container">
+                 <div className= "editor_sub_item">
                     <Editor
                         editorState={editorState}
                         onEditorStateChange={this.onEditorStateChange}
@@ -67,11 +66,9 @@ class PostEditorPage extends Component {
                         }}
                     />
                 </div>
-
                 <div className="editor_sub_item_1">
-                    <button >  submit_1 </button>
+                    <button> submit_1</button>
                 </div>
-
 
 
 
