@@ -5,6 +5,7 @@ import draftToHtml from 'draftjs-to-html';
 import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
 import '../cssdir/WYSIWYGComponentCss.css';
 import styled from 'styled-components';
+import axios from "../utils/AxiosAPI";
 
 
 const EditorStyled = styled.div`
@@ -27,8 +28,28 @@ class PostEditorPage extends Component {
 
 
      uploadCB = (file) => {
-        const formData = new FormData();
-        formData.append('file', file);
+         // Create an object of formData
+         const formData = new FormData();
+
+         // Update the formData object
+         formData.append(
+             "file",
+             selectedFile,
+             selectedFile.name
+         );
+
+         // Details of the uploaded file
+         console.log("file path:"+selectedFilePath);
+
+         // Request made to the backend api
+         // Send formData object
+
+         axios.post('uploadFile', formData, config).then(response => {
+             console.log("upload file:" + response.config);
+             response.config.showRespState(response.status);
+         }).catch(error => {
+             console.log("upload file:" + error);
+         });
 
 
     }
